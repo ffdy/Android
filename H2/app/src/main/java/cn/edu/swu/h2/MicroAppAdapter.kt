@@ -3,6 +3,7 @@ package cn.edu.swu.h2
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -11,6 +12,7 @@ class MicroAppAdapter(val microApps: List<MicroApp>) : RecyclerView.Adapter<Micr
     inner class MicroAppViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val descTextView = itemView.findViewById<TextView>(R.id.desc)
         val priceTextView =  itemView.findViewById<TextView>(R.id.price_text)
+        val imageView =  itemView.findViewById<ImageView>(R.id.imageView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MicroAppViewHolder {
@@ -22,6 +24,7 @@ class MicroAppAdapter(val microApps: List<MicroApp>) : RecyclerView.Adapter<Micr
         val microApp = microApps[position]
         holder.descTextView.text = microApp.desc
         holder.priceTextView.text = microApp.price
+        holder.imageView.setImageResource(microApp.img)
     }
 
     override fun getItemCount(): Int {

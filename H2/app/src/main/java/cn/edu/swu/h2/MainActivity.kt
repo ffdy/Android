@@ -93,6 +93,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this, "已取消", Toast.LENGTH_LONG)
                     .show()
             }
+            .show()
     }
 
     private fun login() {
@@ -112,7 +113,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         val timer = Timer()
         val _this = this
 
-        object : TimerTask() {
+        val task = object : TimerTask() {
             override fun run() {
                 Log.d(TAG, "Progress: ${progressBar.progress}")
                 progressBar.progress += 1
@@ -132,6 +133,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
 
         }
+        timer.schedule(task, 0, 1000)
     }
 
 }
