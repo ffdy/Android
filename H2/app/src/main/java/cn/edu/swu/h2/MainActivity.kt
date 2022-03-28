@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
             override fun afterTextChanged(p0: Editable?) {
                 Log.d(TAG, "after password changed : $p0")
-                username = p0.toString()
+                password = p0.toString()
             }
 
         }
