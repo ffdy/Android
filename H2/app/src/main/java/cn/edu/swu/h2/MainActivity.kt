@@ -70,6 +70,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         }
 
+        // 也可以直接让类实现对应的接口
         inputUsernameEditText.addTextChangedListener(usernameWatcher)
         inputPasswordEditText.addTextChangedListener(passwordWatcher)
 
