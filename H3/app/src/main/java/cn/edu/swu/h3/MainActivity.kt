@@ -1,8 +1,8 @@
 package cn.edu.swu.h3
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.ActionBar
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 
@@ -23,17 +23,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val actionBar: androidx.appcompat.app.ActionBar? = supportActionBar
+        actionBar?.hide()
+
         initView()
     }
 
     private fun initView() {
         manager = supportFragmentManager
-
         showFragment(TAG_CHAT)
-
-//        val tran = manager.beginTransaction()
-//        tran.add(R.id.fragment_container_view, ChatFragment())
-//            .commit()
     }
 
     fun showFragment(tag:String) {
