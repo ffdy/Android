@@ -6,21 +6,32 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
     <fragment
-            android:id="@+id/frag_left"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintWidth_percent=".382"
-            android:name="cn.edu.swu.h3.LeftFragment"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
+            android:id="@+id/fragment_top"
+            android:name="cn.edu.swu.h3.TopFragment"
+            tools:layout="@layout/fragment_top"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
 
     <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/frag_right"
-            app:layout_constraintStart_toEndOf="@id/frag_left"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"/>
+            android:id="@+id/fragment_container_view"
+            app:layout_constraintTop_toBottomOf="@id/fragment_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent=".850"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <fragment
+            android:id="@+id/fragment_bottom"
+            android:name="cn.edu.swu.h3.BottomFragment"
+            tools:layout="@layout/fragment_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/fragment_container_view"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            app:layout_constraintVertical_bias="0.0"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
