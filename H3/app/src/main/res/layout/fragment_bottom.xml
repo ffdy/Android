@@ -6,7 +6,7 @@
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    tools:context=".BottomFragment">
 
-    <TextView
+    <ImageView
             android:id="@+id/b_chat"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -14,34 +14,34 @@
             app:layout_constraintEnd_toStartOf="@id/b_linkman"
             app:layout_constraintWidth_percent=".25"
             android:layout_width="0dp"
-            android:background="@drawable/ic_chat"
+            android:src="@drawable/ic_chat"
             android:layout_height="match_parent"/>
 
-    <TextView
+    <ImageView
             android:id="@+id/b_linkman"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/b_chat"
             app:layout_constraintWidth_percent=".25"
             android:layout_width="0dp"
-            android:background="@drawable/ic_linkman"
+            android:src="@drawable/ic_linkman"
             android:layout_height="match_parent"/>
 
-    <TextView
+    <ImageView
             android:id="@+id/b_find"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/b_linkman"
             app:layout_constraintWidth_percent=".25"
             android:layout_width="0dp"
-            android:background="@drawable/ic_find"
+            android:src="@drawable/ic_find"
             android:layout_height="match_parent"/>
 
-    <TextView
+    <ImageView
             android:id="@+id/b_my"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@id/b_find"
             app:layout_constraintWidth_percent=".25"
             android:layout_width="0dp"
-            android:background="@drawable/ic_my"
+            android:src="@drawable/ic_my"
             android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

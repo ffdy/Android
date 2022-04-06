@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,12 +32,12 @@ class BottomFragment : Fragment(), View.OnClickListener {
     }
 
     private fun initView(view : View) {
-        val chatBottom = view.findViewById<TextView>(R.id.b_chat)
-        val linkmanBottom = view.findViewById<TextView>(R.id.b_linkman)
-        val findBottom = view.findViewById<TextView>(R.id.b_find)
-        val myBottom = view.findViewById<TextView>(R.id.b_my)
+        val chatBottom = view.findViewById<ImageView>(R.id.b_chat)
+        val linkmanBottom = view.findViewById<ImageView>(R.id.b_linkman)
+        val findBottom = view.findViewById<ImageView>(R.id.b_find)
+        val myBottom = view.findViewById<ImageView>(R.id.b_my)
 
-        chatBottom.setBackgroundResource(R.drawable.ic_chat_black)
+        chatBottom.setImageResource(R.drawable.ic_chat_black)
 
         chatBottom.setOnClickListener(this)
         linkmanBottom.setOnClickListener(this)
@@ -47,31 +48,31 @@ class BottomFragment : Fragment(), View.OnClickListener {
     override fun onClick(view: View) {
         val act =  requireActivity() as MainActivity
 
-        val chatBottom = act.findViewById<TextView>(R.id.b_chat)
-        chatBottom.setBackgroundResource(R.drawable.ic_chat)
-        val linkmanBottom = act.findViewById<TextView>(R.id.b_linkman)
-        linkmanBottom.setBackgroundResource(R.drawable.ic_linkman)
-        val findBottom = act.findViewById<TextView>(R.id.b_find)
-        findBottom.setBackgroundResource(R.drawable.ic_find)
-        val myBottom = act.findViewById<TextView>(R.id.b_my)
-        myBottom.setBackgroundResource(R.drawable.ic_my)
+        val chatBottom = act.findViewById<ImageView>(R.id.b_chat)
+        chatBottom.setImageResource(R.drawable.ic_chat)
+        val linkmanBottom = act.findViewById<ImageView>(R.id.b_linkman)
+        linkmanBottom.setImageResource(R.drawable.ic_linkman)
+        val findBottom = act.findViewById<ImageView>(R.id.b_find)
+        findBottom.setImageResource(R.drawable.ic_find)
+        val myBottom = act.findViewById<ImageView>(R.id.b_my)
+        myBottom.setImageResource(R.drawable.ic_my)
 
         when(view.id) {
             R.id.b_chat-> {
                 act.showFragment("chat")
-                chatBottom.setBackgroundResource(R.drawable.ic_chat_black)
+                chatBottom.setImageResource(R.drawable.ic_chat_black)
             }
             R.id.b_linkman-> {
                 act.showFragment("linkman")
-                linkmanBottom.setBackgroundResource(R.drawable.ic_linkman_black)
+                linkmanBottom.setImageResource(R.drawable.ic_linkman_black)
             }
             R.id.b_find-> {
                 act.showFragment("find")
-                findBottom.setBackgroundResource(R.drawable.ic_find_black)
+                findBottom.setImageResource(R.drawable.ic_find_black)
             }
             R.id.b_my-> {
                 act.showFragment("my")
-                myBottom.setBackgroundResource(R.drawable.ic_my_black)
+                myBottom.setImageResource(R.drawable.ic_my_black)
             }
         }
     }
